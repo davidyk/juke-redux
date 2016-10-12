@@ -14,9 +14,9 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
-console.log("store.getState()", store.getState());
-console.log("Receive value", RECEIVE_ALBUMS_FROM_SERVER );
+// console.log("store.getState()", store.getState());
+// console.log("Receive value", RECEIVE_ALBUMS_FROM_SERVER );
 
-console.log("Dispatch", store.dispatch({type: RECEIVE_ALBUMS_FROM_SERVER, albums: [1,2,3]}));
+// console.log("Dispatch", store.dispatch({type: RECEIVE_ALBUMS_FROM_SERVER, albums: [1,2,3]}));
 
-console.log("store.getState()", store.getState());
+// console.log("store.getState()", store.getState());
