@@ -1,23 +1,12 @@
 import {connect} from "react-redux";
 import Albums from "../components/Albums.js";
-import { receiveAlbums } from '../myRedux.js';
+import { receiveAlbums, fetchAlbumsFromServer } from '../myRedux.js';
 
 const mapStateToProps = function (state, ownProps) {
   return  {
     albums: state.albums
   }
 }
-
-const fetchAlbumsFromServer = () => {
-  return dispatch => {
-    fetch('/api/albums')
-      .then(res => res.json())
-      // use the dispatch method the thunkMiddleware gave us
-      .then(albums => dispatch(receiveAlbums(albums)));
-  }
-}
-// var temp = receiveAlbums(1);
-// console.log("temp.type", temp.type)
 
 //giving us methods on our props within comonent, allow to interact with store
 const mapDispatchToProps = function (dispatch, ownProps) {

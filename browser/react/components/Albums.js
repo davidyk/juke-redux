@@ -19,7 +19,8 @@ class Albums extends Component {
       <div>
         <h3>Albums</h3>
         <div className="row">
-        {console.log(this.props)}
+        {console.log("HELLOW!!!", this.props)}
+        
           {this.props.albums.map(album =>
            <div key ={album.name} className="col-xs-4">
               <a className="thumbnail" href="#">
